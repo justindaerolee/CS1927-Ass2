@@ -1,0 +1,674 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"URL",
+				"URLcount"
+			],
+			[
+				"first",
+				"firstURL"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"delet",
+				"deleting"
+			],
+			[
+				"re",
+				"reset"
+			],
+			[
+				"pr",
+				"printf	printf …"
+			],
+			[
+				"cop",
+				"copyElm"
+			],
+			[
+				"pri",
+				"printList"
+			],
+			[
+				"ir",
+				"IteratorInt"
+			],
+			[
+				"find",
+				"findPrevious"
+			],
+			[
+				"fin",
+				"findPrevious"
+			],
+			[
+				"has",
+				"hasNext"
+			],
+			[
+				"di",
+				"directionMoved"
+			],
+			[
+				"n",
+				"next"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"l",
+				"lastMoveWasPrev"
+			],
+			[
+				"rese",
+				"reseting"
+			],
+			[
+				"las",
+				"lastMoveWasNext"
+			],
+			[
+				"last",
+				"lastMoveWasNext"
+			],
+			[
+				"iter",
+				"IteratorInt"
+			],
+			[
+				"valreut",
+				"valreturnedp1"
+			],
+			[
+				"va",
+				"valreturned"
+			],
+			[
+				"pre",
+				"previous"
+			],
+			[
+				"to",
+				"toBeRetruned"
+			],
+			[
+				"nod",
+				"nodeNeeded"
+			],
+			[
+				"sum",
+				"sumListItems"
+			],
+			[
+				"MAG",
+				"MAGIC_ALLOC"
+			],
+			[
+				"he",
+				"HEADER_SIZE"
+			],
+			[
+				"powe",
+				"power_two_memory"
+			],
+			[
+				"free",
+				"free_list_ptr"
+			],
+			[
+				"ne",
+				"next"
+			],
+			[
+				"mem",
+				"memory_size"
+			],
+			[
+				"empty",
+				"emptyTime"
+			],
+			[
+				"DEF",
+				"DEFAULT_DISCIPLINES"
+			],
+			[
+				"port",
+				"portPos"
+			],
+			[
+				"S",
+				"STUDENT_BPS"
+			],
+			[
+				"ST",
+				"STUDENT_MJ"
+			],
+			[
+				"STU",
+				"STUDENT_MMONEY"
+			],
+			[
+				"por",
+				"portPos"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*\nPageRank(d, diffPR, maxIterations)\n\n            Read \"web pages\" from the collection in file \"collection.txt\"\n            and build a graph structure using Adjacency List Representation\n\n            N = number of urls in the collection\n            diff = 0;\n            For each url pi in the collection\n                PR(pi) = 1/N  ;\n\n            iteration = 0;\n            While (iteration < maxIteration AND diff >= diffPR)\n                iteration++;\n                For each url pi in the collection\n                    PR_old = PR(pi);\n                    sum = 0 ;\n                    for each url pj pointing to pi (ignore self-loops and parallel edges)\n                        sum = sum + PR(pj) / out-degree-of(pj);\n\n                    PR(pi) = (1-d)/N + d * sum\n                    diff = diff + Abs(PR_old - PR(pi);\n*/\n#include <stdlib.h>\n#include <stdio.h>\n#include \"Graph.h\"\n\nPageRank(d, diffPR, maxIterations) {\n\n    FILE * collection;\n    int URLs[];\n    int i;\n    int URLcount = 0;\n\n    collection = fopen (\"collection.txt\", \"r\");\n    for (i = 0;; i++) {\n        URL[i] = fgetc(collection);\n        URLcount++;\n        if (feof(collection)) {\n            break;\n        }\n    }\n    fclose(collection);\n    Graph webPages = newGraph(URLcount);\n\n    int pR[URLcount];\n    for (i = 0; i <= URLcount; i++) {\n        pR[i] = (1 / URLcount);\n    }\n    int iteration;\n\n    for (iteration = 0; iteration < maxIteration && diff >= diffPR; iteration ++) {\n\n    }\n\n\n}\n",
+			"file": "/Users/aaronschneider/Documents/1927Assignment 2/pagerank.c",
+			"file_size": 1365,
+			"file_write_time": 131077624370000000,
+			"settings":
+			{
+				"buffer_size": 1481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/aaronschneider/Documents/1927Assignment 2/Graph.h",
+			"settings":
+			{
+				"buffer_size": 680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/aaronschneider/Documents/1927Assignment 2/Graph.c",
+			"settings":
+			{
+				"buffer_size": 2398,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"su",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 505.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/aaronschneider/Downloads/lab08-2/crawl.c",
+		"/Users/aaronschneider/Downloads/lab08-2/graph.c",
+		"/Users/aaronschneider/Downloads/lab08/set.h",
+		"/Users/aaronschneider/Downloads/assp1/listIteratorInt.c",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/aaronschneider/Downloads/assp1/testListIteratorInt.c",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/aaronschneider/Downloads/lab03-3/DLList.c",
+		"/Users/aaronschneider/Downloads/myed.c",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/SublimeAStyleFormatter/Default (OSX).sublime-keymap",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/aaronschneider/Downloads/lab03/DLList.c",
+		"/Users/aaronschneider/Library/Application Support/Sublime Text 3/Packages/User/SublimeAStyleFormatter.sublime-settings",
+		"/Users/aaronschneider/Downloads/backToFront.h",
+		"/Users/aaronschneider/Downloads/backToFront.c"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"handle",
+			"FALSE",
+			"directionMoved",
+			"int",
+			"header",
+			"new",
+			"->",
+			"update",
+			"bestFit",
+			"bestfit",
+			"itop",
+			"free",
+			"disci",
+			"discpi",
+			"getport",
+			"portpos",
+			"exchan",
+			"exchane"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" -> ",
+			"findFit"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/aaronschneider/Documents/1927Assignment 2/pagerank.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								791,
+								791
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/aaronschneider/Documents/1927Assignment 2/Graph.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/aaronschneider/Documents/1927Assignment 2/Graph.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 966.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Ass2.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"TRUE"
+			]
+		],
+		"width": 400.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
