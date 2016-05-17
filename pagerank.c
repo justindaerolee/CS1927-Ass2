@@ -23,9 +23,16 @@ PageRank(d, diffPR, maxIterations)
 */
 #include <stdlib.h>
 #include <stdio.h>
-#include "graph.h"
+#include "Graph.h"
 
-PageRank(d, diffPR, maxIterations) {
+int main (int argc, const char * argv[]) {
+
+
+
+    return EXIT_SUCCESS;
+}
+
+int PageRank(int d, int diffPR, int maxIterations) {
 
     FILE * collection;
     int URLs[];
@@ -33,18 +40,42 @@ PageRank(d, diffPR, maxIterations) {
     int URLcount = 0;
 
     collection = fopen ("collection.txt", "r");
-    for (i = 0;;i++) {
+    for (i = 0;; i++) {
         URL[i] = fgetc(collection);
         URLcount++;
         if (feof(collection)) {
             break;
         }
+        printf("%c", collection);
     }
     fclose(collection);
     Graph webPages = newGraph(URLcount);
 
     int pR[URLcount];
     for (i = 0; i <= URLcount; i++) {
-        pR[i] = (1/URLcount);
+        pR[i] = (1 / URLcount);
     }
+    int iteration;
+
+    for (iteration = 0; iteration < maxIterations && diff >= diffPR; iteration ++) {
+
+        while (i = 0; i < URLcount; i++) {
+            char outgoingURL[0x100];
+
+            snprintf(buf, sizeof(buf), "%s.txt", URL[i]);
+            FILE *f = fopen(buf, "r");
+            //outGoingUrls = fopen ("%d.txt", "r", URL[i]);
+            /*       For each url pi in the collection */
+            int PR_old = pR[i];
+            sum = 0 ;
+            for each url pj pointing to pi (ignore self - loops and parallel edges)
+                sum = sum + PR(pj) / out - degree - of(pj);
+
+            PR(pi) = (1 - d) / N + d * sum
+                     diff = diff + Abs(PR_old - PR(pi);
+        }
+
+    }
+    outGoingUrls = fopen ("%d.txt", "r", URL[i]);
+
 }
