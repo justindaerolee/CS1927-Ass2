@@ -4,8 +4,10 @@
 // array of words each with urls
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "tree.h"
 
 // use tree implementation, left is the different words, right is the urls 
 
