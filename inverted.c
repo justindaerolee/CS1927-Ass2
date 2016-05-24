@@ -9,13 +9,10 @@
 
 // use tree implementation, left is the different words, right is the urls 
 
-void normalise(char *str);
-void inverted(Graph g);
-int doesContain(char *fileN, char *str);
-char *extractWord(char *url, List l);
+void inverted(char **url, Tree t);
 
 int main(int argc, char **argv) {
-	char **url;
+	char **url; // change depending on the implementation
 	url = getUrl(); // get url and put it into the array
 	Tree t = newTree();
 	t = inverted(url, t);
