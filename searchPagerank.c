@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#include ".h" 
+//#include ".h" //use DDList.h DDList.c
 
 int main(int argc, char **argv) {
 	int i;
