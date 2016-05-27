@@ -21,6 +21,8 @@ void printTree(Tree t);
 
 char **getUrl(int *); // gets url from collection.txt //use aarons code for this
 
+void freeArray(char **, int size);
+
 int main(void) {
 	char **url;
 	int count = 0;
@@ -28,10 +30,10 @@ int main(void) {
 	url = getUrl(numOfUrl); // get url and put it into the array
 	
 	Tree t = newTree();
-	printf("%d", *numOfUrl);
 	t = inverted(url, *numOfUrl);
 	printTree(t); // alittle different to the orginal showTree
 	freeTree(t);
+	freeArray(url, *numOfUrl);
 	return 0;
 }
 Tree inverted(char  **url, int urlCount) {
@@ -43,12 +45,11 @@ Tree inverted(char  **url, int urlCount) {
 	int count;
 	char *str;
 	char *word;
-	char urlFile[54];
+	char urlFile[MAX_URL_SIZE + 4];
 
 	for (i = 0; i < urlCount ; i ++) {
 		strcpy(urlFile, url[i]);
 		strcat(urlFile, ".txt");
-		printf("%s\n", urlFile);
 		fp = fopen(urlFile, "r");
 		assert(fp != NULL);
 		c = fgetc(fp);
@@ -158,4 +159,11 @@ char **getUrl(int *numOfUrl) { // gets url from collection.txt
 	}
 	*numOfUrl = urlCount;
 	return url;
+} 
+void freeArray(char **array, int size){
+	int i;
+	for (i = 0; i < size; i ++) {
+		free(array[i]);
+	}
+	free(array);
 }
