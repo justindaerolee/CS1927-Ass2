@@ -15,7 +15,7 @@ int termf(char *url, char *term); //gets the term frequency in the url
 DLList getListOfurls(int argc, char **argv);
 // finds the urls that that contain the following strings
 
-// the functions below are used within the functions that mentioned above
+// the functions below are used within the functions that are mentioned above
 // dont worry about the functions below unless you feel the need to use it
 void getUrlStr(char url[], char *str, int start);
 // gets the url in the string provided, int start determines where to begin the search
