@@ -10,10 +10,10 @@
 
 #include "DLList.h"
 
-int termf(char *url, char *term); //gets the term frequency in the url
+int termf(char *url, char *term); //returns the term frequency in the url
 // ".txt" at the end of the url is added in the function
 DLList getListOfurls(int argc, char **argv);
-// finds the urls that that contain the following strings
+// returns a list of the urls that that contain the following strings
 
 // the functions below are used within the functions that are mentioned above
 // dont worry about the functions below unless you feel the need to use it
