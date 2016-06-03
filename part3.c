@@ -51,7 +51,6 @@ double scalFootDist(DLList l, int n, int *p, int numOfFiles) {
 	int *sizeT = malloc(sizeof(int) * numOfFiles); // array of the size of the various files, e.g sizeT[0] = the size of the first file.
 	fileSize(l, sizeT);
 	int i;
-	printf("n = %d\n", n);
 	int fI = 0; // file Itterator
 	if (!DLListIsEmpty(l)) {
 		for (i = 0; i < n; i ++) {
@@ -71,27 +70,20 @@ double scalFootDist(DLList l, int n, int *p, int numOfFiles) {
 			
 			strcpy(str, DLListCurrent(l));
 			DLListAfter(visited, str, 0, 0);
-
-			printf("degree = %d, sizet = %d, p[i] = %d, sum = %f\n", getDegree(l), sizeT[fI], p[i], sum);
-
 			sum = fabs((double)getDegree(l)/(double)sizeT[fI] - (double)p[i]/(double)n) + sum;
-			printf("after sum = %lf\n", sum);
 			// finds the same url in the list
 			while (DLListMove(l, 1) == 0) {
 				if (strncmp(DLListCurrent(l), "url", 3) != 0) {
 					fI ++;
 				} else {
 					if (strcmp(DLListCurrent(l), str) == 0) {
-						printf("degree = %d, sizet = %d, p[i] = %d, sum = %f\n", getDegree(l), sizeT[fI], p[i], sum);
 						sum += fabs((double)getDegree(l)/(double)sizeT[fI] - (double)p[i]/(double)n);
-						printf("after sum = %lf\n", sum);
 					}
 				}
 			}
 		}
 	}
 	free(sizeT);
-	printf("final sum = %lf\n", sum);
 	return sum;
 }
 //finds the different sets of p and uses the output to find the Scale of Distance
@@ -100,9 +92,6 @@ void getPos(int n, int j, int *visited, int *p, double *minScaleFDist, DLList l,
 	double num;
 	if (j == n) {
 		if (*minScaleFDist < 0) {
-			for (i = 0; i < n; i ++) { // for testing
-				printf("p[%d] %d\n", i, p[i]);
-			}
 			*minScaleFDist = scalFootDist(l, n, p, numOfFiles);
 		} else {
 			num = scalFootDist(l, n, p, numOfFiles);
@@ -137,8 +126,6 @@ int strIsIn(DLList l, char *str) {
 // wrapper function
 double minScaleFDist(DLList l, int n, int numOfFiles) {
 	int factN = factorial(n);
-	printf("%d\n", factN); // delete after testing
-
 	double *minScaleFDist = malloc(sizeof(double));
 	*minScaleFDist = -1;
 	int i;
